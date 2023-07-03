@@ -1,0 +1,2496 @@
+openapi: 3.0.3
+info:
+  title: BLOG API PROJECT
+  version: 1.0.0
+  description: A sample blog to learn about DRF
+paths:
+  /api/:
+    get:
+      operationId: api_list
+      parameters:
+      - name: page_size
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - tokenAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedProductList'
+          description: ''
+    post:
+      operationId: api_create
+      tags:
+      - api
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Product'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Product'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Product'
+        required: true
+      security:
+      - cookieAuth: []
+      - tokenAuth: []
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'
+          description: ''
+  /api/{id}/:
+    get:
+      operationId: api_retrieve
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this Продукты.
+        required: true
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - tokenAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'
+          description: ''
+    put:
+      operationId: api_update
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this Продукты.
+        required: true
+      tags:
+      - api
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Product'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Product'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Product'
+        required: true
+      security:
+      - cookieAuth: []
+      - tokenAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'
+          description: ''
+    patch:
+      operationId: api_partial_update
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this Продукты.
+        required: true
+      tags:
+      - api
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedProduct'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedProduct'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedProduct'
+      security:
+      - cookieAuth: []
+      - tokenAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'
+          description: ''
+    delete:
+      operationId: api_destroy
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this Продукты.
+        required: true
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - tokenAuth: []
+      responses:
+        '204':
+          description: No response body
+  /api/category/:
+    get:
+      operationId: api_category_list
+      parameters:
+      - name: page_size
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - tokenAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedCategoryList'
+          description: ''
+    post:
+      operationId: api_category_create
+      tags:
+      - api
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Category'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Category'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Category'
+        required: true
+      security:
+      - cookieAuth: []
+      - tokenAuth: []
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Category'
+          description: ''
+  /api/category/{id}/:
+    get:
+      operationId: api_category_retrieve
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        required: true
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - tokenAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Category'
+          description: ''
+    put:
+      operationId: api_category_update
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        required: true
+      tags:
+      - api
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Category'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Category'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Category'
+        required: true
+      security:
+      - cookieAuth: []
+      - tokenAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Category'
+          description: ''
+    patch:
+      operationId: api_category_partial_update
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        required: true
+      tags:
+      - api
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedCategory'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedCategory'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedCategory'
+      security:
+      - cookieAuth: []
+      - tokenAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Category'
+          description: ''
+    delete:
+      operationId: api_category_destroy
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        required: true
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - tokenAuth: []
+      responses:
+        '204':
+          description: No response body
+  /api/productcombin/:
+    get:
+      operationId: api_productcombin_list
+      parameters:
+      - name: page_size
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - tokenAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedProductCombinationList'
+          description: ''
+    post:
+      operationId: api_productcombin_create
+      tags:
+      - api
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ProductCombination'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/ProductCombination'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/ProductCombination'
+        required: true
+      security:
+      - cookieAuth: []
+      - tokenAuth: []
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProductCombination'
+          description: ''
+  /api/productcombin/{id}/:
+    get:
+      operationId: api_productcombin_retrieve
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        required: true
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - tokenAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProductCombination'
+          description: ''
+    put:
+      operationId: api_productcombin_update
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        required: true
+      tags:
+      - api
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ProductCombination'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/ProductCombination'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/ProductCombination'
+        required: true
+      security:
+      - cookieAuth: []
+      - tokenAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProductCombination'
+          description: ''
+    patch:
+      operationId: api_productcombin_partial_update
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        required: true
+      tags:
+      - api
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedProductCombination'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedProductCombination'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedProductCombination'
+      security:
+      - cookieAuth: []
+      - tokenAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProductCombination'
+          description: ''
+    delete:
+      operationId: api_productcombin_destroy
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        required: true
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - tokenAuth: []
+      responses:
+        '204':
+          description: No response body
+  /api/products/{id}/:
+    get:
+      operationId: api_products_retrieve
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        required: true
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - tokenAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'
+          description: ''
+    put:
+      operationId: api_products_update
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        required: true
+      tags:
+      - api
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Product'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Product'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Product'
+        required: true
+      security:
+      - cookieAuth: []
+      - tokenAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'
+          description: ''
+    patch:
+      operationId: api_products_partial_update
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        required: true
+      tags:
+      - api
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedProduct'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedProduct'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedProduct'
+      security:
+      - cookieAuth: []
+      - tokenAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'
+          description: ''
+    delete:
+      operationId: api_products_destroy
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        required: true
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - tokenAuth: []
+      responses:
+        '204':
+          description: No response body
+  /api/productstock/:
+    get:
+      operationId: api_productstock_list
+      parameters:
+      - name: page_size
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - tokenAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedProductStockList'
+          description: ''
+    post:
+      operationId: api_productstock_create
+      tags:
+      - api
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ProductStock'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/ProductStock'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/ProductStock'
+        required: true
+      security:
+      - cookieAuth: []
+      - tokenAuth: []
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProductStock'
+          description: ''
+  /api/productstock/{id}/:
+    get:
+      operationId: api_productstock_retrieve
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        required: true
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - tokenAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProductStock'
+          description: ''
+    put:
+      operationId: api_productstock_update
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        required: true
+      tags:
+      - api
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ProductStock'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/ProductStock'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/ProductStock'
+        required: true
+      security:
+      - cookieAuth: []
+      - tokenAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProductStock'
+          description: ''
+    patch:
+      operationId: api_productstock_partial_update
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        required: true
+      tags:
+      - api
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedProductStock'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedProductStock'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedProductStock'
+      security:
+      - cookieAuth: []
+      - tokenAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProductStock'
+          description: ''
+    delete:
+      operationId: api_productstock_destroy
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        required: true
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - tokenAuth: []
+      responses:
+        '204':
+          description: No response body
+  /api/productvar/:
+    get:
+      operationId: api_productvar_list
+      parameters:
+      - name: page_size
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - tokenAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedProductVarOpList'
+          description: ''
+    post:
+      operationId: api_productvar_create
+      tags:
+      - api
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ProductVarOp'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/ProductVarOp'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/ProductVarOp'
+        required: true
+      security:
+      - cookieAuth: []
+      - tokenAuth: []
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProductVarOp'
+          description: ''
+  /api/productvar/{id}/:
+    get:
+      operationId: api_productvar_retrieve
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        required: true
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - tokenAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProductVarOp'
+          description: ''
+    put:
+      operationId: api_productvar_update
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        required: true
+      tags:
+      - api
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ProductVarOp'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/ProductVarOp'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/ProductVarOp'
+        required: true
+      security:
+      - cookieAuth: []
+      - tokenAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProductVarOp'
+          description: ''
+    patch:
+      operationId: api_productvar_partial_update
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        required: true
+      tags:
+      - api
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedProductVarOp'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedProductVarOp'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedProductVarOp'
+      security:
+      - cookieAuth: []
+      - tokenAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProductVarOp'
+          description: ''
+    delete:
+      operationId: api_productvar_destroy
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        required: true
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - tokenAuth: []
+      responses:
+        '204':
+          description: No response body
+  /api/productvarval/:
+    get:
+      operationId: api_productvarval_list
+      parameters:
+      - name: page_size
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - tokenAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedProductVarOpValList'
+          description: ''
+    post:
+      operationId: api_productvarval_create
+      tags:
+      - api
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ProductVarOpVal'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/ProductVarOpVal'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/ProductVarOpVal'
+        required: true
+      security:
+      - cookieAuth: []
+      - tokenAuth: []
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProductVarOpVal'
+          description: ''
+  /api/productvarval/{id}/:
+    get:
+      operationId: api_productvarval_retrieve
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        required: true
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - tokenAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProductVarOpVal'
+          description: ''
+    put:
+      operationId: api_productvarval_update
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        required: true
+      tags:
+      - api
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ProductVarOpVal'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/ProductVarOpVal'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/ProductVarOpVal'
+        required: true
+      security:
+      - cookieAuth: []
+      - tokenAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProductVarOpVal'
+          description: ''
+    patch:
+      operationId: api_productvarval_partial_update
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        required: true
+      tags:
+      - api
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedProductVarOpVal'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedProductVarOpVal'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedProductVarOpVal'
+      security:
+      - cookieAuth: []
+      - tokenAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProductVarOpVal'
+          description: ''
+    delete:
+      operationId: api_productvarval_destroy
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        required: true
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - tokenAuth: []
+      responses:
+        '204':
+          description: No response body
+  /api/schema/:
+    get:
+      operationId: api_schema_retrieve
+      description: |-
+        OpenApi3 schema for this API. Format can be selected via content negotiation.
+
+        - YAML: application/vnd.oai.openapi
+        - JSON: application/vnd.oai.openapi+json
+      parameters:
+      - in: query
+        name: format
+        schema:
+          type: string
+          enum:
+          - json
+          - yaml
+      - in: query
+        name: lang
+        schema:
+          type: string
+          enum:
+          - af
+          - ar
+          - ar-dz
+          - ast
+          - az
+          - be
+          - bg
+          - bn
+          - br
+          - bs
+          - ca
+          - ckb
+          - cs
+          - cy
+          - da
+          - de
+          - dsb
+          - el
+          - en
+          - en-au
+          - en-gb
+          - eo
+          - es
+          - es-ar
+          - es-co
+          - es-mx
+          - es-ni
+          - es-ve
+          - et
+          - eu
+          - fa
+          - fi
+          - fr
+          - fy
+          - ga
+          - gd
+          - gl
+          - he
+          - hi
+          - hr
+          - hsb
+          - hu
+          - hy
+          - ia
+          - id
+          - ig
+          - io
+          - is
+          - it
+          - ja
+          - ka
+          - kab
+          - kk
+          - km
+          - kn
+          - ko
+          - ky
+          - lb
+          - lt
+          - lv
+          - mk
+          - ml
+          - mn
+          - mr
+          - ms
+          - my
+          - nb
+          - ne
+          - nl
+          - nn
+          - os
+          - pa
+          - pl
+          - pt
+          - pt-br
+          - ro
+          - ru
+          - sk
+          - sl
+          - sq
+          - sr
+          - sr-latn
+          - sv
+          - sw
+          - ta
+          - te
+          - tg
+          - th
+          - tk
+          - tr
+          - tt
+          - udm
+          - uk
+          - ur
+          - uz
+          - vi
+          - zh-hans
+          - zh-hant
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - tokenAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/vnd.oai.openapi:
+              schema:
+                type: object
+                additionalProperties: {}
+            application/yaml:
+              schema:
+                type: object
+                additionalProperties: {}
+            application/vnd.oai.openapi+json:
+              schema:
+                type: object
+                additionalProperties: {}
+            application/json:
+              schema:
+                type: object
+                additionalProperties: {}
+          description: ''
+  /api/subcategory/:
+    get:
+      operationId: api_subcategory_list
+      parameters:
+      - name: page_size
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - tokenAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedSubcategoryList'
+          description: ''
+    post:
+      operationId: api_subcategory_create
+      tags:
+      - api
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Subcategory'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Subcategory'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Subcategory'
+        required: true
+      security:
+      - cookieAuth: []
+      - tokenAuth: []
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Subcategory'
+          description: ''
+  /api/subcategory/{id}/:
+    get:
+      operationId: api_subcategory_retrieve
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        required: true
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - tokenAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Subcategory'
+          description: ''
+    put:
+      operationId: api_subcategory_update
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        required: true
+      tags:
+      - api
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Subcategory'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Subcategory'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Subcategory'
+        required: true
+      security:
+      - cookieAuth: []
+      - tokenAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Subcategory'
+          description: ''
+    patch:
+      operationId: api_subcategory_partial_update
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        required: true
+      tags:
+      - api
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedSubcategory'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedSubcategory'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedSubcategory'
+      security:
+      - cookieAuth: []
+      - tokenAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Subcategory'
+          description: ''
+    delete:
+      operationId: api_subcategory_destroy
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        required: true
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - tokenAuth: []
+      responses:
+        '204':
+          description: No response body
+  /api/useraddress/:
+    get:
+      operationId: api_useraddress_list
+      parameters:
+      - name: page_size
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - tokenAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedUserAddressList'
+          description: ''
+    post:
+      operationId: api_useraddress_create
+      tags:
+      - api
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UserAddress'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/UserAddress'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/UserAddress'
+        required: true
+      security:
+      - cookieAuth: []
+      - tokenAuth: []
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserAddress'
+          description: ''
+  /api/useraddress/{id}/:
+    get:
+      operationId: api_useraddress_retrieve
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        required: true
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - tokenAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserAddress'
+          description: ''
+    put:
+      operationId: api_useraddress_update
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        required: true
+      tags:
+      - api
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UserAddress'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/UserAddress'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/UserAddress'
+        required: true
+      security:
+      - cookieAuth: []
+      - tokenAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserAddress'
+          description: ''
+    patch:
+      operationId: api_useraddress_partial_update
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        required: true
+      tags:
+      - api
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedUserAddress'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedUserAddress'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedUserAddress'
+      security:
+      - cookieAuth: []
+      - tokenAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserAddress'
+          description: ''
+    delete:
+      operationId: api_useraddress_destroy
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        required: true
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - tokenAuth: []
+      responses:
+        '204':
+          description: No response body
+  /api/users/{id}/:
+    get:
+      operationId: api_users_retrieve
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        required: true
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - tokenAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+          description: ''
+    put:
+      operationId: api_users_update
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        required: true
+      tags:
+      - api
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/User'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/User'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/User'
+        required: true
+      security:
+      - cookieAuth: []
+      - tokenAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+          description: ''
+    patch:
+      operationId: api_users_partial_update
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        required: true
+      tags:
+      - api
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedUser'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedUser'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedUser'
+      security:
+      - cookieAuth: []
+      - tokenAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+          description: ''
+    delete:
+      operationId: api_users_destroy
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        required: true
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - tokenAuth: []
+      responses:
+        '204':
+          description: No response body
+  /api/variationopt/:
+    get:
+      operationId: api_variationopt_list
+      parameters:
+      - name: page_size
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - tokenAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedVariationsOptList'
+          description: ''
+    post:
+      operationId: api_variationopt_create
+      tags:
+      - api
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/VariationsOpt'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/VariationsOpt'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/VariationsOpt'
+        required: true
+      security:
+      - cookieAuth: []
+      - tokenAuth: []
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VariationsOpt'
+          description: ''
+  /api/variationopt/{id}/:
+    get:
+      operationId: api_variationopt_retrieve
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        required: true
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - tokenAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VariationsOpt'
+          description: ''
+    put:
+      operationId: api_variationopt_update
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        required: true
+      tags:
+      - api
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/VariationsOpt'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/VariationsOpt'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/VariationsOpt'
+        required: true
+      security:
+      - cookieAuth: []
+      - tokenAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VariationsOpt'
+          description: ''
+    patch:
+      operationId: api_variationopt_partial_update
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        required: true
+      tags:
+      - api
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedVariationsOpt'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedVariationsOpt'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedVariationsOpt'
+      security:
+      - cookieAuth: []
+      - tokenAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VariationsOpt'
+          description: ''
+    delete:
+      operationId: api_variationopt_destroy
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        required: true
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - tokenAuth: []
+      responses:
+        '204':
+          description: No response body
+  /api/variations/:
+    get:
+      operationId: api_variations_list
+      parameters:
+      - name: page_size
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - tokenAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedVariationList'
+          description: ''
+    post:
+      operationId: api_variations_create
+      tags:
+      - api
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Variation'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Variation'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Variation'
+        required: true
+      security:
+      - cookieAuth: []
+      - tokenAuth: []
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Variation'
+          description: ''
+  /api/variations/{id}/:
+    get:
+      operationId: api_variations_retrieve
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        required: true
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - tokenAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Variation'
+          description: ''
+    put:
+      operationId: api_variations_update
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        required: true
+      tags:
+      - api
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Variation'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Variation'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Variation'
+        required: true
+      security:
+      - cookieAuth: []
+      - tokenAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Variation'
+          description: ''
+    patch:
+      operationId: api_variations_partial_update
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        required: true
+      tags:
+      - api
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedVariation'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedVariation'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedVariation'
+      security:
+      - cookieAuth: []
+      - tokenAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Variation'
+          description: ''
+    delete:
+      operationId: api_variations_destroy
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        required: true
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - tokenAuth: []
+      responses:
+        '204':
+          description: No response body
+components:
+  schemas:
+    Category:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        category_name:
+          type: string
+          maxLength: 300
+        categoryIcon:
+          type: string
+          maxLength: 255
+        slug:
+          type: string
+          maxLength: 200
+          pattern: ^[-a-zA-Z0-9_]+$
+      required:
+      - categoryIcon
+      - category_name
+      - id
+      - slug
+    PaginatedCategoryList:
+      type: object
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page_size=4
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page_size=2
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/Category'
+    PaginatedProductCombinationList:
+      type: object
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page_size=4
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page_size=2
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/ProductCombination'
+    PaginatedProductList:
+      type: object
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page_size=4
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page_size=2
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/Product'
+    PaginatedProductStockList:
+      type: object
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page_size=4
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page_size=2
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/ProductStock'
+    PaginatedProductVarOpList:
+      type: object
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page_size=4
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page_size=2
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/ProductVarOp'
+    PaginatedProductVarOpValList:
+      type: object
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page_size=4
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page_size=2
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/ProductVarOpVal'
+    PaginatedSubcategoryList:
+      type: object
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page_size=4
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page_size=2
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/Subcategory'
+    PaginatedUserAddressList:
+      type: object
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page_size=4
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page_size=2
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/UserAddress'
+    PaginatedVariationList:
+      type: object
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page_size=4
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page_size=2
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/Variation'
+    PaginatedVariationsOptList:
+      type: object
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page_size=4
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page_size=2
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/VariationsOpt'
+    PatchedCategory:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        category_name:
+          type: string
+          maxLength: 300
+        categoryIcon:
+          type: string
+          maxLength: 255
+        slug:
+          type: string
+          maxLength: 200
+          pattern: ^[-a-zA-Z0-9_]+$
+    PatchedProduct:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        product_name:
+          type: string
+          maxLength: 300
+        slug:
+          type: string
+          maxLength: 50
+          pattern: ^[-a-zA-Z0-9_]+$
+        publish:
+          type: string
+          format: date-time
+        image:
+          type: string
+          format: uri
+        status:
+          $ref: '#/components/schemas/ProductStatusEnum'
+        category:
+          type: integer
+        sub_category:
+          type: integer
+    PatchedProductCombination:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        combination:
+          type: string
+          maxLength: 100
+        sku:
+          type: string
+          maxLength: 100
+        price:
+          type: string
+          format: decimal
+          pattern: ^-?\d{0,7}(?:\.\d{0,3})?$
+        unique:
+          type: string
+          maxLength: 100
+        available_stock:
+          type: integer
+        status:
+          $ref: '#/components/schemas/ProductCombinationStatusEnum'
+        products:
+          type: integer
+    PatchedProductStock:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        totalstock:
+          type: integer
+        unit_price:
+          type: number
+          format: double
+        total_price:
+          type: number
+          format: double
+        product_combination:
+          type: integer
+    PatchedProductVarOp:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        variation_name:
+          type: string
+          maxLength: 100
+        product:
+          type: integer
+    PatchedProductVarOpVal:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        product_variation:
+          type: integer
+    PatchedSubcategory:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        subcategory_name:
+          type: string
+          maxLength: 100
+        category:
+          type: integer
+    PatchedUser:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        first_name:
+          type: string
+          maxLength: 30
+        last_name:
+          type: string
+          maxLength: 30
+        ip:
+          type: string
+          maxLength: 30
+        email:
+          type: string
+          format: email
+          maxLength: 254
+        password:
+          type: string
+          maxLength: 100
+        status:
+          $ref: '#/components/schemas/UserStatusEnum'
+        sactivation_Code:
+          type: string
+          maxLength: 200
+        forgot_Code:
+          type: string
+          maxLength: 200
+        forgotCodeSentTime:
+          type: string
+          format: date-time
+    PatchedUserAddress:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        completeAddress:
+          type: string
+          maxLength: 300
+        phoneNumber:
+          type: string
+          maxLength: 15
+        user:
+          type: integer
+    PatchedVariation:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        variation_name:
+          type: string
+          maxLength: 50
+    PatchedVariationsOpt:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        variations:
+          type: integer
+    Product:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        product_name:
+          type: string
+          maxLength: 300
+        slug:
+          type: string
+          maxLength: 50
+          pattern: ^[-a-zA-Z0-9_]+$
+        publish:
+          type: string
+          format: date-time
+        image:
+          type: string
+          format: uri
+        status:
+          $ref: '#/components/schemas/ProductStatusEnum'
+        category:
+          type: integer
+        sub_category:
+          type: integer
+      required:
+      - category
+      - id
+      - image
+      - product_name
+      - slug
+      - sub_category
+    ProductCombination:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        combination:
+          type: string
+          maxLength: 100
+        sku:
+          type: string
+          maxLength: 100
+        price:
+          type: string
+          format: decimal
+          pattern: ^-?\d{0,7}(?:\.\d{0,3})?$
+        unique:
+          type: string
+          maxLength: 100
+        available_stock:
+          type: integer
+        status:
+          $ref: '#/components/schemas/ProductCombinationStatusEnum'
+        products:
+          type: integer
+      required:
+      - combination
+      - id
+      - products
+      - sku
+      - unique
+    ProductCombinationStatusEnum:
+      enum:
+      - AVBL
+      - NAVBL
+      type: string
+      description: |-
+        * `AVBL` - Available
+        * `NAVBL` - Not_Available
+    ProductStatusEnum:
+      enum:
+      - DF
+      - PB
+      type: string
+      description: |-
+        * `DF` - Draft
+        * `PB` - Published
+    ProductStock:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        totalstock:
+          type: integer
+        unit_price:
+          type: number
+          format: double
+        total_price:
+          type: number
+          format: double
+        product_combination:
+          type: integer
+      required:
+      - id
+      - product_combination
+    ProductVarOp:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        variation_name:
+          type: string
+          maxLength: 100
+        product:
+          type: integer
+      required:
+      - id
+      - product
+      - variation_name
+    ProductVarOpVal:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        product_variation:
+          type: integer
+      required:
+      - id
+      - product_variation
+    Subcategory:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        subcategory_name:
+          type: string
+          maxLength: 100
+        category:
+          type: integer
+      required:
+      - category
+      - id
+      - subcategory_name
+    User:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        first_name:
+          type: string
+          maxLength: 30
+        last_name:
+          type: string
+          maxLength: 30
+        ip:
+          type: string
+          maxLength: 30
+        email:
+          type: string
+          format: email
+          maxLength: 254
+        password:
+          type: string
+          maxLength: 100
+        status:
+          $ref: '#/components/schemas/UserStatusEnum'
+        sactivation_Code:
+          type: string
+          maxLength: 200
+        forgot_Code:
+          type: string
+          maxLength: 200
+        forgotCodeSentTime:
+          type: string
+          format: date-time
+      required:
+      - email
+      - first_name
+      - forgot_Code
+      - id
+      - ip
+      - last_name
+      - password
+      - sactivation_Code
+    UserAddress:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        completeAddress:
+          type: string
+          maxLength: 300
+        phoneNumber:
+          type: string
+          maxLength: 15
+        user:
+          type: integer
+      required:
+      - completeAddress
+      - id
+      - phoneNumber
+      - user
+    UserStatusEnum:
+      enum:
+      - DF
+      - RG
+      - SN
+      type: string
+      description: |-
+        * `DF` - Draft
+        * `RG` - Registered
+        * `SN` - Sent
+    Variation:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        variation_name:
+          type: string
+          maxLength: 50
+      required:
+      - id
+      - variation_name
+    VariationsOpt:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        variations:
+          type: integer
+      required:
+      - id
+      - variations
+  securitySchemes:
+    cookieAuth:
+      type: apiKey
+      in: cookie
+      name: sessionid
+    tokenAuth:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: Token-based authentication with required prefix "Token"
