@@ -5,7 +5,7 @@ from api.views import *
 
 router = SimpleRouter()
 router.register('', ProductViewSet, basename='products')
-router.register('', UserViewSet, basename='users')
+router.register('users', UserViewSet, basename='users')
 
 urlpatterns = [
     path('products/<int:pk>/', ProductDetailView.as_view(), name='product-detail'),
