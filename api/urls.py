@@ -1,9 +1,9 @@
 from django.urls import path
-from rest_framework.routers import SimpleRouter
+from rest_framework.routers import DefaultRouter
 from api.views import *
 
 
-router = SimpleRouter()
+router = DefaultRouter()
 router.register('', ProductViewSet, basename='products')
 router.register('users', UserViewSet, basename='users')
 
