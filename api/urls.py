@@ -4,8 +4,8 @@ from api.views import *
 
 
 router = DefaultRouter()
-router.register('', ProductViewSet, basename='products')
-router.register('users', UserViewSet, basename='users')
+router.register(r'products', ProductViewSet, basename='products')
+router.register(r'users', UserViewSet, basename='user')
 
 urlpatterns = [
     path('products/<int:pk>/', ProductDetailView.as_view(), name='product-detail'),
