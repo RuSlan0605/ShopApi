@@ -1,0 +1,1537 @@
+{
+	"info": {
+		"_postman_id": "bad7af41-cac1-4ce8-b9ee-a78439359a11",
+		"name": "shopapi Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27854435"
+	},
+	"item": [
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "https://russhopapi.pythonanywhere.com/api/products/",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://russhopapi.pythonanywhere.com/api/products/",
+							"protocol": "https",
+							"host": [
+								"russhopapi",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"api",
+								"products",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://russhopapi.pythonanywhere.com/api/products/",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://russhopapi.pythonanywhere.com/api/products/",
+							"protocol": "https",
+							"host": [
+								"russhopapi",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"api",
+								"products",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://russhopapi.pythonanywhere.com/api/products/1/",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://russhopapi.pythonanywhere.com/api/products/1/",
+							"protocol": "https",
+							"host": [
+								"russhopapi",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"api",
+								"products",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://russhopapi.pythonanywhere.com/api/products/1/",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "https://russhopapi.pythonanywhere.com/api/products/1/",
+							"protocol": "https",
+							"host": [
+								"russhopapi",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"api",
+								"products",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://russhopapi.pythonanywhere.com/api/products/1/",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "https://russhopapi.pythonanywhere.com/api/products/1/",
+							"protocol": "https",
+							"host": [
+								"russhopapi",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"api",
+								"products",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://russhopapi.pythonanywhere.com/api/products/1/",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://russhopapi.pythonanywhere.com/api/products/2/",
+							"protocol": "https",
+							"host": [
+								"russhopapi",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"api",
+								"products",
+								"2",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "https://russhopapi.pythonanywhere.com/api/users/",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://russhopapi.pythonanywhere.com/api/users/",
+							"protocol": "https",
+							"host": [
+								"russhopapi",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"api",
+								"users",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://russhopapi.pythonanywhere.com/api/users/",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://russhopapi.pythonanywhere.com/api/users/",
+							"protocol": "https",
+							"host": [
+								"russhopapi",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"api",
+								"users",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://russhopapi.pythonanywhere.com/api/users/1/",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://russhopapi.pythonanywhere.com/api/users/1/",
+							"protocol": "https",
+							"host": [
+								"russhopapi",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"api",
+								"users",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://russhopapi.pythonanywhere.com/api/users/1/",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "https://russhopapi.pythonanywhere.com/api/users/1/",
+							"protocol": "https",
+							"host": [
+								"russhopapi",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"api",
+								"users",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://russhopapi.pythonanywhere.com/api/users/1/",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "https://russhopapi.pythonanywhere.com/api/users/1/",
+							"protocol": "https",
+							"host": [
+								"russhopapi",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"api",
+								"users",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://russhopapi.pythonanywhere.com/api/users/1/",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://russhopapi.pythonanywhere.com/api/users/1/",
+							"protocol": "https",
+							"host": [
+								"russhopapi",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"api",
+								"users",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Useraddress",
+			"item": [
+				{
+					"name": "https://russhopapi.pythonanywhere.com/api/useraddress/",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://russhopapi.pythonanywhere.com/api/useraddress/",
+							"protocol": "https",
+							"host": [
+								"russhopapi",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"api",
+								"useraddress",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://russhopapi.pythonanywhere.com/api/useraddress/",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://russhopapi.pythonanywhere.com/api/useraddress/",
+							"protocol": "https",
+							"host": [
+								"russhopapi",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"api",
+								"useraddress",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://russhopapi.pythonanywhere.com/api/useraddress/1/",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://russhopapi.pythonanywhere.com/api/useraddress/1/",
+							"protocol": "https",
+							"host": [
+								"russhopapi",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"api",
+								"useraddress",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://russhopapi.pythonanywhere.com/api/useraddress/1/",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "https://russhopapi.pythonanywhere.com/api/useraddress/1/",
+							"protocol": "https",
+							"host": [
+								"russhopapi",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"api",
+								"useraddress",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://russhopapi.pythonanywhere.com/api/useraddress/1/",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "https://russhopapi.pythonanywhere.com/api/useraddress/1/",
+							"protocol": "https",
+							"host": [
+								"russhopapi",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"api",
+								"useraddress",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://russhopapi.pythonanywhere.com/api/useraddress/1/",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://russhopapi.pythonanywhere.com/api/useraddress/1/",
+							"protocol": "https",
+							"host": [
+								"russhopapi",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"api",
+								"useraddress",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Category",
+			"item": [
+				{
+					"name": "https://russhopapi.pythonanywhere.com/api/category/",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://russhopapi.pythonanywhere.com/api/category/",
+							"protocol": "https",
+							"host": [
+								"russhopapi",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"api",
+								"category",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://russhopapi.pythonanywhere.com/api/category/",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://russhopapi.pythonanywhere.com/api/category/",
+							"protocol": "https",
+							"host": [
+								"russhopapi",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"api",
+								"category",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://russhopapi.pythonanywhere.com/api/category/1/",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://russhopapi.pythonanywhere.com/api/category/1/",
+							"protocol": "https",
+							"host": [
+								"russhopapi",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"api",
+								"category",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://russhopapi.pythonanywhere.com/api/category/1/",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "https://russhopapi.pythonanywhere.com/api/category/1/",
+							"protocol": "https",
+							"host": [
+								"russhopapi",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"api",
+								"category",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://russhopapi.pythonanywhere.com/api/category/1/",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "https://russhopapi.pythonanywhere.com/api/category/1/",
+							"protocol": "https",
+							"host": [
+								"russhopapi",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"api",
+								"category",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "subcategory",
+			"item": [
+				{
+					"name": "https://russhopapi.pythonanywhere.com/api/subcategory",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://russhopapi.pythonanywhere.com/api/subcategory",
+							"protocol": "https",
+							"host": [
+								"russhopapi",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"api",
+								"subcategory"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://russhopapi.pythonanywhere.com/api/subcategory/",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://russhopapi.pythonanywhere.com/api/subcategory/",
+							"protocol": "https",
+							"host": [
+								"russhopapi",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"api",
+								"subcategory",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://russhopapi.pythonanywhere.com/api/subcategory/1/",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://russhopapi.pythonanywhere.com/api/subcategory/1/",
+							"protocol": "https",
+							"host": [
+								"russhopapi",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"api",
+								"subcategory",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://russhopapi.pythonanywhere.com/api/subcategory/1/",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "https://russhopapi.pythonanywhere.com/api/subcategory/1/",
+							"protocol": "https",
+							"host": [
+								"russhopapi",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"api",
+								"subcategory",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://russhopapi.pythonanywhere.com/api/subcategory/1/",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "https://russhopapi.pythonanywhere.com/api/subcategory/1/",
+							"protocol": "https",
+							"host": [
+								"russhopapi",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"api",
+								"subcategory",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://russhopapi.pythonanywhere.com/api/subcategory/1/",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://russhopapi.pythonanywhere.com/api/subcategory/1/",
+							"protocol": "https",
+							"host": [
+								"russhopapi",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"api",
+								"subcategory",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product combinations",
+			"item": [
+				{
+					"name": "https://russhopapi.pythonanywhere.com/api/productcombin/",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://russhopapi.pythonanywhere.com/api/productcombin/",
+							"protocol": "https",
+							"host": [
+								"russhopapi",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"api",
+								"productcombin",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://russhopapi.pythonanywhere.com/api/productcombin/",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://russhopapi.pythonanywhere.com/api/productcombin/",
+							"protocol": "https",
+							"host": [
+								"russhopapi",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"api",
+								"productcombin",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://russhopapi.pythonanywhere.com/api/productcombin/1/",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://russhopapi.pythonanywhere.com/api/productcombin/1/",
+							"protocol": "https",
+							"host": [
+								"russhopapi",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"api",
+								"productcombin",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://russhopapi.pythonanywhere.com/api/productcombin/1/",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "https://russhopapi.pythonanywhere.com/api/productcombin/1/",
+							"protocol": "https",
+							"host": [
+								"russhopapi",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"api",
+								"productcombin",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://russhopapi.pythonanywhere.com/api/productcombin/1/",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "https://russhopapi.pythonanywhere.com/api/productcombin/1/",
+							"protocol": "https",
+							"host": [
+								"russhopapi",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"api",
+								"productcombin",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://russhopapi.pythonanywhere.com/api/productcombin/1/",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://russhopapi.pythonanywhere.com/api/productcombin/1/",
+							"protocol": "https",
+							"host": [
+								"russhopapi",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"api",
+								"productcombin",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product stock",
+			"item": [
+				{
+					"name": "https://russhopapi.pythonanywhere.com/api/productstock/",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://russhopapi.pythonanywhere.com/api/productstock/",
+							"protocol": "https",
+							"host": [
+								"russhopapi",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"api",
+								"productstock",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://russhopapi.pythonanywhere.com/api/productstock/",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://russhopapi.pythonanywhere.com/api/productstock/",
+							"protocol": "https",
+							"host": [
+								"russhopapi",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"api",
+								"productstock",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://russhopapi.pythonanywhere.com/api/productstock/1/",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://russhopapi.pythonanywhere.com/api/productstock/1/",
+							"protocol": "https",
+							"host": [
+								"russhopapi",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"api",
+								"productstock",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://russhopapi.pythonanywhere.com/api/productstock/1/",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "https://russhopapi.pythonanywhere.com/api/productstock/1/",
+							"protocol": "https",
+							"host": [
+								"russhopapi",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"api",
+								"productstock",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://russhopapi.pythonanywhere.com/api/productstock/1/",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "https://russhopapi.pythonanywhere.com/api/productstock/1/",
+							"protocol": "https",
+							"host": [
+								"russhopapi",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"api",
+								"productstock",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://russhopapi.pythonanywhere.com/api/productstock/1/",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://russhopapi.pythonanywhere.com/api/productstock/1/",
+							"protocol": "https",
+							"host": [
+								"russhopapi",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"api",
+								"productstock",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product variations",
+			"item": [
+				{
+					"name": "https://russhopapi.pythonanywhere.com/api/productvar/",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://russhopapi.pythonanywhere.com/api/productvar/",
+							"protocol": "https",
+							"host": [
+								"russhopapi",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"api",
+								"productvar",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://russhopapi.pythonanywhere.com/api/productvar/",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://russhopapi.pythonanywhere.com/api/productvar/",
+							"protocol": "https",
+							"host": [
+								"russhopapi",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"api",
+								"productvar",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://russhopapi.pythonanywhere.com/api/productvar/1/",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://russhopapi.pythonanywhere.com/api/productvar/1/",
+							"protocol": "https",
+							"host": [
+								"russhopapi",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"api",
+								"productvar",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://russhopapi.pythonanywhere.com/api/productvar/1/",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "https://russhopapi.pythonanywhere.com/api/productvar/1/",
+							"protocol": "https",
+							"host": [
+								"russhopapi",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"api",
+								"productvar",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://russhopapi.pythonanywhere.com/api/productvar/1/",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "https://russhopapi.pythonanywhere.com/api/productvar/1/",
+							"protocol": "https",
+							"host": [
+								"russhopapi",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"api",
+								"productvar",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://russhopapi.pythonanywhere.com/api/productvar/1/",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://russhopapi.pythonanywhere.com/api/productvar/1/",
+							"protocol": "https",
+							"host": [
+								"russhopapi",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"api",
+								"productvar",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product Variation value",
+			"item": [
+				{
+					"name": "https://russhopapi.pythonanywhere.com/api/productvarval/",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://russhopapi.pythonanywhere.com/api/productvarval/",
+							"protocol": "https",
+							"host": [
+								"russhopapi",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"api",
+								"productvarval",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://russhopapi.pythonanywhere.com/api/productvarval/",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://russhopapi.pythonanywhere.com/api/productvarval/",
+							"protocol": "https",
+							"host": [
+								"russhopapi",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"api",
+								"productvarval",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://russhopapi.pythonanywhere.com/api/productvarval/1/",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://russhopapi.pythonanywhere.com/api/productvarval/1/",
+							"protocol": "https",
+							"host": [
+								"russhopapi",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"api",
+								"productvarval",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://russhopapi.pythonanywhere.com/api/productvarval/1/",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "https://russhopapi.pythonanywhere.com/api/productvarval/1/",
+							"protocol": "https",
+							"host": [
+								"russhopapi",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"api",
+								"productvarval",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://russhopapi.pythonanywhere.com/api/productvarval/1/",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "https://russhopapi.pythonanywhere.com/api/productvarval/1/",
+							"protocol": "https",
+							"host": [
+								"russhopapi",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"api",
+								"productvarval",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://russhopapi.pythonanywhere.com/api/productvarval/1/",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://russhopapi.pythonanywhere.com/api/productvarval/1/",
+							"protocol": "https",
+							"host": [
+								"russhopapi",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"api",
+								"productvarval",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Variations",
+			"item": [
+				{
+					"name": "https://russhopapi.pythonanywhere.com/api/variations/",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://russhopapi.pythonanywhere.com/api/variations/",
+							"protocol": "https",
+							"host": [
+								"russhopapi",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"api",
+								"variations",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://russhopapi.pythonanywhere.com/api/variations/",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://russhopapi.pythonanywhere.com/api/variations/",
+							"protocol": "https",
+							"host": [
+								"russhopapi",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"api",
+								"variations",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://russhopapi.pythonanywhere.com/api/variations/1/",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://russhopapi.pythonanywhere.com/api/variations/1/",
+							"protocol": "https",
+							"host": [
+								"russhopapi",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"api",
+								"variations",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://russhopapi.pythonanywhere.com/api/variations/1/",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "https://russhopapi.pythonanywhere.com/api/variations/1/",
+							"protocol": "https",
+							"host": [
+								"russhopapi",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"api",
+								"variations",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://russhopapi.pythonanywhere.com/api/variations/1/",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "https://russhopapi.pythonanywhere.com/api/variations/1/",
+							"protocol": "https",
+							"host": [
+								"russhopapi",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"api",
+								"variations",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://russhopapi.pythonanywhere.com/api/variations/1/",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://russhopapi.pythonanywhere.com/api/variations/1/",
+							"protocol": "https",
+							"host": [
+								"russhopapi",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"api",
+								"variations",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Variations options",
+			"item": [
+				{
+					"name": "https://russhopapi.pythonanywhere.com/api/variationopt/",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://russhopapi.pythonanywhere.com/api/variationopt/",
+							"protocol": "https",
+							"host": [
+								"russhopapi",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"api",
+								"variationopt",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://russhopapi.pythonanywhere.com/api/variationopt/",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://russhopapi.pythonanywhere.com/api/variationopt/",
+							"protocol": "https",
+							"host": [
+								"russhopapi",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"api",
+								"variationopt",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://russhopapi.pythonanywhere.com/api/variationopt/1/",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://russhopapi.pythonanywhere.com/api/variationopt/1/",
+							"protocol": "https",
+							"host": [
+								"russhopapi",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"api",
+								"variationopt",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://russhopapi.pythonanywhere.com/api/variationopt/1/",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "https://russhopapi.pythonanywhere.com/api/variationopt/1/",
+							"protocol": "https",
+							"host": [
+								"russhopapi",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"api",
+								"variationopt",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://russhopapi.pythonanywhere.com/api/variationopt/1/",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "https://russhopapi.pythonanywhere.com/api/variationopt/1/",
+							"protocol": "https",
+							"host": [
+								"russhopapi",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"api",
+								"variationopt",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://russhopapi.pythonanywhere.com/api/variationopt/1/",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://russhopapi.pythonanywhere.com/api/variationopt/1/",
+							"protocol": "https",
+							"host": [
+								"russhopapi",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"api",
+								"variationopt",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
